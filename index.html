@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TLNT — подбор персонала в ОАЭ за 14 дней</title>
+<meta name="description" content="Кадровое агентство для русскоязычного бизнеса в ОАЭ. Находим сотрудника за 14 дней, фиксированная цена, гарантия замены 30 дней. Медэстетика, управление, персонал." />
+<meta property="og:title" content="TLNT — подбор персонала в ОАЭ за 14 дней" />
+<meta property="og:description" content="Находим сотрудника за 14 дней. Фиксированная цена. Гарантия замены 30 дней." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&subset=cyrillic,cyrillic-ext,latin&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#14110e; --ink-2:#1c1813; --ink-3:#262019;
+    --cream:#f4efe6; --cream-dim:#cfc6b6; --muted:#8f8473;
+    --brass:#c9a35e; --brass-soft:#e3c98f; --line:#332b22;
+    --serif:"Cormorant Garamond",Georgia,serif;
+    --sans:"IBM Plex Sans",-apple-system,Segoe UI,Roboto,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--ink);color:var(--cream);font-family:var(--sans);line-height:1.6;
+    font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.08;text-wrap:balance;letter-spacing:-.01em}
+  em{font-style:italic;color:var(--brass-soft)}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  .narrow{max-width:760px}
+  section{padding:88px 0;border-top:1px solid var(--line)}
+  .eyebrow{font-family:var(--sans);font-size:13px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--brass);font-weight:600;margin-bottom:18px}
+  .btn{display:inline-flex;align-items:center;gap:9px;background:var(--brass);color:#1a1610;
+    font-weight:600;font-size:16px;padding:15px 28px;border-radius:6px;transition:.18s;border:none;cursor:pointer}
+  .btn:hover{background:var(--brass-soft);transform:translateY(-1px)}
+  .btn-ghost{background:transparent;color:var(--cream);border:1px solid var(--line)}
+  .btn-ghost:hover{border-color:var(--brass);background:transparent}
+  /* NAV */
+  nav{position:sticky;top:0;z-index:50;background:rgba(20,17,14,.86);backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{font-family:var(--serif);font-size:26px;font-weight:600;letter-spacing:.04em}
+  .logo b{color:var(--brass)}
+  nav .links{display:flex;gap:28px;font-size:15px;color:var(--cream-dim)}
+  nav .links a:hover{color:var(--cream)}
+  nav .btn{padding:10px 18px;font-size:14px}
+  @media(max-width:780px){nav .links{display:none}}
+  /* HERO */
+  .hero{padding:96px 0 80px;text-align:center}
+  .hero h1{font-size:clamp(38px,6vw,72px);margin-bottom:26px}
+  .hero p.sub{font-size:clamp(18px,2.4vw,22px);color:var(--cream-dim);max-width:640px;margin:0 auto 36px}
+  .hero .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .hero .reassure{margin-top:20px;font-size:14px;color:var(--muted)}
+  /* TRUST BAR */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
+    border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:64px}
+  .stat{background:var(--ink-2);padding:28px 18px;text-align:center}
+  .stat .num{font-family:var(--serif);font-size:clamp(30px,4vw,44px);color:var(--brass-soft);line-height:1}
+  .stat .lbl{font-size:13px;color:var(--muted);margin-top:10px;letter-spacing:.02em}
+  @media(max-width:680px){.stats{grid-template-columns:repeat(2,1fr)}}
+  .logobar{margin-top:40px;text-align:center}
+  .logobar .t{font-size:13px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px}
+  .logobar .row{display:flex;gap:14px 34px;justify-content:center;flex-wrap:wrap;color:var(--cream-dim);
+    font-family:var(--serif);font-size:21px;letter-spacing:.06em}
+  /* SECTION HEAD */
+  .shead{max-width:680px;margin-bottom:48px}
+  .shead h2{font-size:clamp(30px,4.4vw,46px);margin-bottom:18px}
+  .shead p{color:var(--cream-dim);font-size:18px}
+  /* PAS */
+  .pains{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .pain{background:var(--ink-2);border:1px solid var(--line);border-radius:10px;padding:28px}
+  .pain h3{font-size:23px;margin-bottom:10px;color:var(--cream)}
+  .pain p{color:var(--muted);font-size:15px}
+  @media(max-width:780px){.pains{grid-template-columns:1fr}}
+  /* STEPS */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:s}
+  .step{position:relative}
+  .step .n{font-family:var(--serif);font-size:40px;color:var(--brass);opacity:.5;line-height:1}
+  .step h3{font-size:21px;margin:12px 0 8px}
+  .step p{color:var(--muted);font-size:15px}
+  @media(max-width:780px){.steps{grid-template-columns:1fr 1fr}}
+  @media(max-width:480px){.steps{grid-template-columns:1fr}}
+  /* PRICING */
+  .pricing{background:var(--ink-2)}
+  .pcards{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:30px}
+  @media(max-width:780px){.pcards{grid-template-columns:1fr}}
+  .pcard{background:var(--ink-3);border:1px solid var(--line);border-radius:12px;padding:34px}
+  .pcard.feat{border-color:var(--brass);position:relative}
+  .pcard .tag{position:absolute;top:-12px;left:34px;background:var(--brass);color:#1a1610;
+    font-size:12px;font-weight:600;padding:4px 12px;border-radius:20px;letter-spacing:.04em}
+  .pcard .role{font-size:15px;color:var(--brass);letter-spacing:.04em;text-transform:uppercase;font-weight:600}
+  .pcard .price{font-family:var(--serif);font-size:52px;margin:10px 0 4px}
+  .pcard .price small{font-size:18px;color:var(--muted)}
+  .pcard ul{list-style:none;margin-top:20px;display:flex;flex-direction:column;gap:11px}
+  .pcard li{display:flex;gap:11px;font-size:15px;color:var(--cream-dim)}
+  .pcard li::before{content:"—";color:var(--brass);flex-shrink:0}
+  .compare{text-align:center;color:var(--cream-dim);font-size:16px;max-width:680px;margin:0 auto}
+  .compare b{color:var(--brass-soft)}
+  /* NICHES */
+  .niches{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  @media(max-width:780px){.niches{grid-template-columns:1fr 1fr}}
+  @media(max-width:480px){.niches{grid-template-columns:1fr}}
+  .niche{background:var(--ink-2);border:1px solid var(--line);border-radius:10px;padding:26px;transition:.18s}
+  .niche:hover{border-color:var(--brass)}
+  .niche .pct{font-family:var(--serif);font-size:15px;color:var(--brass);float:right}
+  .niche h3{font-size:22px;margin-bottom:8px}
+  .niche p{color:var(--muted);font-size:14px}
+  /* CASES */
+  .cases{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media(max-width:880px){.cases{grid-template-columns:1fr}}
+  .case{background:var(--ink-2);border:1px solid var(--line);border-radius:12px;padding:30px}
+  .case .meta{font-size:13px;color:var(--brass);letter-spacing:.04em;text-transform:uppercase;margin-bottom:14px}
+  .case h3{font-size:24px;margin-bottom:12px}
+  .case p{color:var(--cream-dim);font-size:15px;margin-bottom:18px}
+  .case .res{display:flex;gap:24px;border-top:1px solid var(--line);padding-top:16px}
+  .case .res div span{display:block}
+  .case .res .v{font-family:var(--serif);font-size:28px;color:var(--brass-soft)}
+  .case .res .k{font-size:12px;color:var(--muted)}
+  /* GUARANTEE */
+  .guar{background:var(--ink-2);border:1px solid var(--brass);border-radius:14px;padding:48px;text-align:center}
+  .guar h2{font-size:clamp(28px,4vw,40px);margin-bottom:16px}
+  .guar p{color:var(--cream-dim);max-width:620px;margin:0 auto;font-size:18px}
+  /* TESTIMONIALS */
+  .quotes{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  @media(max-width:780px){.quotes{grid-template-columns:1fr}}
+  .quote{background:var(--ink-2);border:1px solid var(--line);border-radius:12px;padding:30px}
+  .quote p{font-family:var(--serif);font-size:21px;line-height:1.4;color:var(--cream);margin-bottom:18px}
+  .quote .who{font-size:14px;color:var(--muted)}
+  /* FAQ */
+  .faq details{border-bottom:1px solid var(--line);padding:22px 0}
+  .faq summary{font-size:19px;color:var(--cream);cursor:pointer;list-style:none;display:flex;
+    justify-content:space-between;gap:20px;font-weight:500}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";color:var(--brass);font-size:26px;line-height:1;flex-shrink:0}
+  .faq details[open] summary::after{content:"–"}
+  .faq p{color:var(--cream-dim);font-size:16px;margin-top:14px;max-width:760px}
+  /* FINAL CTA */
+  .final{text-align:center;background:var(--ink-2)}
+  .final h2{font-size:clamp(32px,5vw,56px);margin-bottom:20px}
+  .final p{color:var(--cream-dim);font-size:19px;max-width:560px;margin:0 auto 32px}
+  /* FOOTER */
+  footer{border-top:1px solid var(--line);padding:48px 0;color:var(--muted);font-size:14px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+  footer a{color:var(--cream-dim)}footer a:hover{color:var(--brass)}
+  /* STICKY MOBILE CTA */
+  .mcta{position:sticky;bottom:0;z-index:40;display:none;background:rgba(20,17,14,.95);
+    backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:12px 16px}
+  .mcta .btn{width:100%;justify-content:center}
+  @media(max-width:780px){.mcta{display:block}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="logo"><b>TLNT</b></div>
+    <div class="links">
+      <a href="#how">Как мы работаем</a>
+      <a href="#pricing">Цены</a>
+      <a href="#niches">Направления</a>
+      <a href="#cases">Кейсы</a>
+      <a href="#faq">Вопросы</a>
+    </div>
+    <a href="#contact" class="btn">Оставить заявку</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap narrow">
+    <div class="eyebrow">Подбор персонала в ОАЭ</div>
+    <h1>Найдём сотрудника за <em>14 дней</em>. Без раздутого штата HR.</h1>
+    <p class="sub">Кадровое агентство для русскоязычного бизнеса в Дубае. Фиксированная цена, гарантия замены 30 дней, проверенные кандидаты из живой базы.</p>
+    <div class="cta-row">
+      <a href="#contact" class="btn">Описать вакансию</a>
+      <a href="#how" class="btn btn-ghost">Как это работает</a>
+    </div>
+    <p class="reassure">Предоплата 50% — остаток только когда сотрудник вышел на работу.</p>
+
+    <div class="stats">
+      <div class="stat"><div class="num">300 000 AED</div><div class="lbl">закрыто за 3 месяца</div></div>
+      <div class="stat"><div class="num">13</div><div class="lbl">позиций закрыто</div></div>
+      <div class="stat"><div class="num">2,4×</div><div class="lbl">клиент возвращается</div></div>
+      <div class="stat"><div class="num">14 дней</div><div class="lbl">средний срок подбора</div></div>
+    </div>
+
+    <div class="logobar">
+      <div class="t">Нам доверяют</div>
+      <div class="row">
+        <span>ПРИВЕ</span><span>СУРАТ</span><span>АВАНТА</span><span>АССЕЛЬ</span><span>SOLAR</span><span>ЮЛИЯ</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="problem">
+  <div class="wrap">
+    <div class="shead">
+      <div class="eyebrow">Знакомо?</div>
+      <h2>Найм отнимает время, а штатного HR держать <em>дорого и рано</em></h2>
+      <p>Вы — владелец бизнеса. Вакансия горит, а вы вместо своих задач разбираете десятки нерелевантных откликов.</p>
+    </div>
+    <div class="pains">
+      <div class="pain"><h3>Откликов много — толку мало</h3><p>Часы на просмотр резюме, а на интервью приходят совсем не те, кого ждали.</p></div>
+      <div class="pain"><h3>Сильные кандидаты уходят</h3><p>Пока вы согласовываете, лучших разбирают другие. Хорошие специалисты на рынке «не лежат».</p></div>
+      <div class="pain"><h3>Ошибка найма стоит дорого</h3><p>Неподходящий сотрудник — это потерянные оклады, время на ввод и упущенные клиенты.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="shead">
+      <div class="eyebrow">Как мы работаем</div>
+      <h2>Вы описываете задачу — <em>мы приводим готового</em> сотрудника</h2>
+      <p>Прозрачный процесс. Вы подключаетесь только там, где принимаете решение.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><h3>Бриф</h3><p>Созвон 30 минут. Поймём задачу, подскажем по уровню зарплаты и профилю кандидата под рынок.</p></div>
+      <div class="step"><div class="n">02</div><h3>Подбор</h3><p>Ищем по базе и каналам, проводим первичные интервью. Вам — только шортлист подходящих.</p></div>
+      <div class="step"><div class="n">03</div><h3>Знакомство</h3><p>Организуем встречу с кандидатами. При необходимости присутствуем сами, помогаем с оценкой.</p></div>
+      <div class="step"><div class="n">04</div><h3>Выход и адаптация</h3><p>Сопровождаем выход сотрудника и первые дни. Гарантия замены — 30 дней.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="pricing">
+  <div class="wrap">
+    <div class="shead">
+      <div class="eyebrow">Цены</div>
+      <h2>Фиксированная стоимость. <em>Без процента</em> от годовой зарплаты</h2>
+      <p>Вы заранее знаете, сколько стоит подбор — независимо от оклада сотрудника.</p>
+    </div>
+    <div class="pcards">
+      <div class="pcard feat">
+        <div class="tag">Специалисты и управленцы</div>
+        <div class="role">Менеджмент · узкие специалисты</div>
+        <div class="price">25 000 <small>AED</small></div>
+        <ul>
+          <li>Управляющие, операционные и проджект-менеджеры</li>
+          <li>Врачи-косметологи, узкопрофильные специалисты</li>
+          <li>Подбор готовой команды под открытие</li>
+          <li>Гарантия замены 30 дней</li>
+        </ul>
+      </div>
+      <div class="pcard">
+        <div class="role">Линейный и личный персонал</div>
+        <div class="price">12 500 <small>AED</small></div>
+        <ul>
+          <li>Администраторы, ассистенты, кураторы</li>
+          <li>Личные ассистенты, домработницы, няни</li>
+          <li>Мастера: маникюр, бьюти-терапия, стилисты</li>
+          <li>Гарантия замены 30 дней</li>
+        </ul>
+      </div>
+    </div>
+    <p class="compare">Корпоративные агентства берут <b>15–25% от годовой зарплаты</b> — это 54 000–90 000 AED за одного специалиста. У нас фиксированная цена в <b>3–4 раза ниже</b>, а скорость — выше.</p>
+  </div>
+</section>
+
+<section id="niches">
+  <div class="wrap">
+    <div class="shead">
+      <div class="eyebrow">Направления</div>
+      <h2>Где мы закрываем вакансии <em>лучше всего</em></h2>
+    </div>
+    <div class="niches">
+      <div class="niche"><span class="pct">26%</span><h3>Медэстетика и beauty</h3><p>Косметологи, гинекологи, эндокринологи, терапевты, стилисты, мастера. Понимаем DHA и специфику.</p></div>
+      <div class="niche"><span class="pct">23%</span><h3>Управление бизнесом</h3><p>Операционные и проджект-менеджеры, управляющие салонов, галерей, retail.</p></div>
+      <div class="niche"><span class="pct">26%</span><h3>Персонал и ассистенты</h3><p>Администраторы, личные ассистенты, кураторы, домашний персонал для семей.</p></div>
+      <div class="niche"><h3>Luxury и retail</h3><p>Бутики, галереи, премиальный сервис — персонал под высокие стандарты.</p></div>
+      <div class="niche"><h3>HoReCa</h3><p>Рестораны и кафе: управленцы и линейный персонал под запуск и рост.</p></div>
+      <div class="niche"><h3>Маркетинг и продажи</h3><p>Маркетологи, бренд-менеджеры, специалисты под конкретную бизнес-модель.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="cases">
+  <div class="wrap">
+    <div class="shead">
+      <div class="eyebrow">Кейсы</div>
+      <h2>Реальные подборы, <em>реальные сроки</em></h2>
+    </div>
+    <div class="cases">
+      <div class="case">
+        <div class="meta">Клиника косметологии · Дубай</div>
+        <h3>Команда врачей под запуск</h3>
+        <p>Подобрали трёх специалистов с проверкой профильной квалификации и параллельным поиском по нескольким позициям.</p>
+        <div class="res"><div><span class="v">3</span><span class="k">врача</span></div><div><span class="v">28 дн</span><span class="k">под ключ</span></div></div>
+      </div>
+      <div class="case">
+        <div class="meta">Галерея · Дубай и Абу-Даби</div>
+        <h3>Операционный директор</h3>
+        <p>Закрыли управленческую позицию на два города. Клиент вернулся за подбором повторно.</p>
+        <div class="res"><div><span class="v">17 дн</span><span class="k">срок</span></div><div><span class="v">3×</span><span class="k">повторных заказа</span></div></div>
+      </div>
+      <div class="case">
+        <div class="meta">Семья · Palm Jumeirah</div>
+        <h3>Личный ассистент и персонал</h3>
+        <p>Подобрали ассистента и домработницу, сопроводили адаптацию в первые дни через общий чат.</p>
+        <div class="res"><div><span class="v">21 дн</span><span class="k">срок</span></div><div><span class="v">2</span><span class="k">позиции</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap narrow">
+    <div class="guar">
+      <div class="eyebrow">Гарантия</div>
+      <h2>Не подошёл — <em>заменим бесплатно</em></h2>
+      <p>Если в течение первого месяца сотрудник оказался не тем, кем представлялся, или не подошёл — мы подбираем замену за свой счёт. Риск на нас, а не на вас.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="shead">
+      <div class="eyebrow">Отзывы</div>
+      <h2>Почему к нам <em>возвращаются</em></h2>
+    </div>
+    <div class="quotes">
+      <div class="quote"><p>«Описала задачу — через две недели вышел человек, который работает до сих пор. Обращаюсь уже третий раз».</p><div class="who">Владелица сети салонов красоты, Дубай</div></div>
+      <div class="quote"><p>«Помогли не просто найти, а понять, какой именно специалист нам нужен и на какую зарплату. Это сэкономило нам недели».</p><div class="who">Собственник галереи, Дубай — Абу-Даби</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="faq">
+  <div class="wrap narrow">
+    <div class="shead"><div class="eyebrow">Вопросы</div><h2>Частые вопросы</h2></div>
+    <details open><summary>Сколько стоит подбор?</summary><p>Фиксированная цена: 25 000 AED за специалистов и управленцев, 12 500 AED за линейный и личный персонал — независимо от зарплаты сотрудника. Оплата 50% на старте, 50% — когда сотрудник вышел на работу.</p></details>
+    <details><summary>Что входит в гарантию?</summary><p>Если в течение первого месяца сотрудник не подошёл, мы бесплатно подбираем замену. Гарантия распространяется на каждую закрытую позицию.</p></details>
+    <details><summary>Мы небольшой бизнес, нам подойдёт?</summary><p>Да. Большинство наших клиентов — салоны, клиники, галереи, retail и семьи без собственного HR-отдела. Вы просто описываете задачу — остальное берём на себя.</p></details>
+    <details><summary>А если позиция редкая или узкопрофильная?</summary><p>Это наша сильная сторона. Узких специалистов (например, в медэстетике) мы оцениваем профильными вопросами и подбираем точно под задачу. Часть кандидатов — из проверенной базы, которых мы уже знаем в работе.</p></details>
+    <details><summary>Работаете только с русскоязычными?</summary><p>Основной сегмент — русскоязычный бизнес в ОАЭ, но под запрос мы находим и собеседуем англоговорящий персонал. Собеседования на английском проводим сами.</p></details>
+    <details><summary>За какой срок реально закрыть вакансию?</summary><p>Средний срок — около 14 дней. По части позиций — быстрее, по сложным с верификацией квалификации — до 3–4 недель. На брифе скажем честный срок под вашу задачу.</p></details>
+  </div>
+</section>
+
+<section id="contact" class="final">
+  <div class="wrap narrow">
+    <div class="eyebrow">Начнём</div>
+    <h2>Опишите вакансию — <em>мы вернёмся с планом</em></h2>
+    <p>Расскажите, кого ищете. Подскажем по зарплате, срокам и профилю кандидата уже на первом созвоне. Это бесплатно.</p>
+    <div class="cta-row" style="justify-content:center;display:flex;gap:14px;flex-wrap:wrap">
+      <a href="https://wa.me/WHATSAPP_NUMBER" class="btn">Написать в WhatsApp</a>
+      <a href="mailto:CONTACT_EMAIL" class="btn btn-ghost">Написать на почту</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="logo"><b>TLNT</b></div>
+    <div>tlnt.ae · Подбор персонала в ОАЭ</div>
+    <div><a href="https://wa.me/WHATSAPP_NUMBER">WhatsApp</a> · <a href="https://t.me/TELEGRAM_USERNAME">Telegram</a></div>
+  </div>
+</footer>
+
+<div class="mcta"><a href="#contact" class="btn">Описать вакансию →</a></div>
+
+</body>
+</html>
